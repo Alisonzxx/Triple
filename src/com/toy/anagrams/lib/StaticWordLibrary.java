@@ -82,7 +82,8 @@ final class StaticWordLibrary extends WordLibrary {
         "vertex",
         "unsigned",
         "traditional",
-        "pudding"
+        "pudding",
+        "animal"
         
     };
 
@@ -132,7 +133,8 @@ final class StaticWordLibrary extends WordLibrary {
         "evtrxe",
         "nuisngde",
         "rtdatioialn",
-        "ddinpug"
+        "ddinpug",
+        "niamal"
     };
     
     final static WordLibrary DEFAULT = new StaticWordLibrary();
