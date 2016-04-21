@@ -83,10 +83,10 @@ public class Anagrams extends JFrame {
     /** Creates new form Anagrams */
     public Anagrams() {
         wordLibrary = WordLibrary.getDefault();
-        
+        int n = 1;
         initComponents();
         getRootPane().setDefaultButton(guessButton);
-        scrambledWord.setText(wordLibrary.getScrambledWord(wordIdx));
+        scrambledWord.setText(wordLibrary.getScrambledWord(wordIdx, n));
         pack();
         guessedWord.requestFocusInWindow();
         // Center in the screen
@@ -257,9 +257,9 @@ public class Anagrams extends JFrame {
 
     private void nextTrialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextTrialActionPerformed
         wordIdx = (wordIdx + 1) % wordLibrary.getSize();
-
+        int n = selectLevel.getSelectedIndex();
         feedbackLabel.setText(" ");
-        scrambledWord.setText(wordLibrary.getScrambledWord(wordIdx));
+        scrambledWord.setText(wordLibrary.getScrambledWord(wordIdx, n));
         //scrambledWord.setText(wordLibrary.getScrambledWord(wordIdx));
         guessedWord.setText("");
         getRootPane().setDefaultButton(guessButton);
